@@ -350,6 +350,7 @@ section {
 
 .input-box input {
     flex: 1 1 20rem;
+    width: 100%;
 }
 
 .contact form .input-box input,
@@ -673,4 +674,81 @@ section {
     .footer li a {
         font-size: 1.3rem;
     }
+}
+
+
+
+.field-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+    gap: 0.2rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.field-wrap input,
+.field-wrap textarea {
+    width: 100%;
+}
+
+.error-msg {
+    color: #ff4d4d;
+    font-size: 1rem;
+    padding-left: 2rem;
+    min-height: 1rem;
+    display: block;
+    
+}
+
+.form-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: auto;
+}
+
+.btn-whatsapp i {
+    font-size: 3rem;
+}
+.input-invalid {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.4) !important;
+}
+
+.input-valid {
+    border-color: var(--main-color) !important;
+    box-shadow: 0 0 8px rgba(0, 255, 106, 0.3) !important;
+}
+
+.form-success {
+    background: rgba(0, 255, 106, 0.1);
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-error-global {
+    background: rgba(255, 77, 77, 0.1);
+    border: 2px solid #ff4d4d;
+    color: #ff4d4d;
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
 }
