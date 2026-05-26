@@ -79,7 +79,7 @@
             Responsive Portfolio Website hosted through domain registration.
           </p>
           <div class="btn">
-            <a href="https://www.ayushshah.com.np/" target="_blank" rel="noopener noreferrer" title="Review Portfolio Project" style="text-decoration:none;color:white;">Review Project</a>
+            <a href="https://www.ayushshah.com.np/" target="_blank" rel="noopener noreferrer" title="Review Portfolio Project">Review Project</a>
           </div>
         </div>
       </div>
@@ -88,20 +88,48 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-      <form action="#">
+      <form id="contactForm" action="https://formspree.io/f/mqejynwy" method="POST" novalidate>
         <div class="input-group-1">
           <div class="input-box">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
+            <div class="field-wrap">
+              <input type="text" id="fname" name="name" placeholder="Full Name" autocomplete="off" />
+              <span class="error-msg" id="fname-error"></span>
+            </div>
+            <div class="field-wrap">
+              <input type="email" id="femail" name="email" placeholder="Email" autocomplete="off" />
+              <span class="error-msg" id="femail-error"></span>
+            </div>
           </div>
           <div class="input-box">
-            <input type="tel" placeholder="Contact Number" />
-            <input type="text" placeholder="Subject" />
+            <div class="field-wrap">
+              <!-- ✏️ SETUP: Change the country code hint if needed (977 = Nepal) -->
+              <input type="tel" id="fphone" name="phone" placeholder="Phone e.g. +977 98XXXXXXXX" autocomplete="off" />
+              <span class="error-msg" id="fphone-error"></span>
+            </div>
+            <div class="field-wrap">
+              <input type="text" id="fsubject" name="subject" placeholder="Subject" autocomplete="off" />
+              <span class="error-msg" id="fsubject-error"></span>
+            </div>
           </div>
         </div>
         <div class="input-group-2">
-          <textarea name="message" placeholder="Your Message" rows="8"></textarea>
-          <input type="submit" class="btn" value="Send Message" />
+          <div class="field-wrap" style="width:100%">
+            <textarea id="fmessage" name="message" placeholder="Your Message (min 10 characters)" rows="8"></textarea>
+            <span class="error-msg" id="fmessage-error"></span>
+          </div>
+          <div class="form-actions">
+            <input type="submit" class="btn" id="submitBtn" value="Send Message" />
+            <!-- ✏️ SETUP: Replace 977XXXXXXXXXX with your WhatsApp number (no + or spaces) -->
+            <a class="btn-whatsapp btn " id="whatsappBtn" href="#" target="_blank">
+              <i class="bx bxl-whatsapp"></i> Send on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div id="form-success" class="form-success" style="display:none;">
+          ✅ Message sent! I'll get back to you soon.
+        </div>
+        <div id="form-error-global" class="form-error-global" style="display:none;">
+          ❌ Something went wrong. Please try again or contact me on WhatsApp.
         </div>
       </form>
     </section>
