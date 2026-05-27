@@ -274,6 +274,7 @@ section {
     transition: 0.3s ease;
     width: 100%;
     max-width: 30rem;
+    height: 100%;
 }
 
 .projects-card:hover {
@@ -622,7 +623,8 @@ section {
     }
 
     .input-box input {
-        flex: 1 1 100%;
+        /* flex: 1 1 100%; */
+        
     }
 
     /* Footer */
@@ -681,10 +683,12 @@ section {
 .field-wrap {
     display: flex;
     flex-direction: column;
-    flex: 1 1 20rem;
+    flex: 1 1 10rem;
     gap: 0.2rem;
     height: 5rem;
     margin-bottom: 1rem;
+    align-self: flex-start;
+    width: 100%;
 }
 
 .field-wrap input,
