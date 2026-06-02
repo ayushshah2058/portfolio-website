@@ -33,7 +33,7 @@ body {
     left: 0;
     padding: 1.5rem 5%;
     background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,11 +53,12 @@ body {
     transform: scale(1.05);
 }
 
-span {
+span{
     background: linear-gradient(270deg, #00ff6a, #37ff00aa);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    /* color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 
 /* Hamburger icon */

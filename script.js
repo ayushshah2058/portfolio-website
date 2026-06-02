@@ -204,3 +204,31 @@ if (form) {
         }
     });
 }
+
+
+//Scamble text animation
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const elements = document.querySelectorAll(".scramble-text");
+
+elements.forEach((element) => {
+    const originalText = element.textContent;
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+        element.textContent = originalText
+            .split("")
+            .map((letter, index) => {
+                if (index < iteration) {
+                    return originalText[index];
+                }
+                return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+        if (iteration >= originalText.length) {
+            clearInterval(interval);
+        }
+
+        iteration += 1 / 3;
+    },20 );
+});
