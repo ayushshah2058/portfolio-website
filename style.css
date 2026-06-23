@@ -16,7 +16,8 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%;
+    /* 1rem = 10px */
     overflow-x: hidden;
 }
 
@@ -53,7 +54,7 @@ body {
     transform: scale(1.05);
 }
 
-span{
+span {
     background: linear-gradient(270deg, #00ff6a, #37ff00aa);
     background-clip: text;
     -webkit-background-clip: text;
@@ -136,8 +137,8 @@ section {
 
 .home-img img:hover {
     box-shadow: 0 0 20px var(--main-color),
-                0 0 40px var(--main-color),
-                0 0 70px var(--main-color);
+        0 0 40px var(--main-color),
+        0 0 70px var(--main-color);
 }
 
 .home-section {
@@ -200,7 +201,7 @@ section {
     align-items: center;
     gap: 8rem;
     background-color: var(--second-bg-color);
-    
+
 }
 
 .about-img img {
@@ -214,22 +215,23 @@ section {
 
 .about-img img:hover {
     box-shadow: 0 0 10px var(--main-color),
-                0 0 30px var(--main-color),
-                0 0 65px var(--main-color);
+        0 0 30px var(--main-color),
+        0 0 65px var(--main-color);
 }
 
 .about-section {
-    max-width: 52rem;
+    max-width: 100%;
+    padding: 0 10%;
 }
 
 .about-section h2 {
     font-size: 4rem;
-    text-align: right;
+    text-align: left;
 }
 
-.about-section p {
+.about-info {
     font-size: 1.5rem;
-    text-align: right;
+    text-align:justify;
     padding: 1.5rem 0;
     line-height: 1.8;
 }
@@ -281,7 +283,7 @@ section {
 
 .projects-card:hover {
     box-shadow: 0 0 15px var(--main-color),
-                0 0 40px var(--main-color);
+        0 0 40px var(--main-color);
     transform: scale(1.02);
 }
 
@@ -308,7 +310,8 @@ section {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.projects-card p:hover{
+
+.projects-card p:hover {
     -webkit-line-clamp: unset;
     overflow: visible;
 }
@@ -316,7 +319,7 @@ section {
 .projects-card .btn {
     font-size: 1.3rem;
     margin-top: auto;
-    
+
 }
 
 .projects-card .btn a {
@@ -536,7 +539,7 @@ section {
         padding: 1.5rem 0;
         font-size: 2rem;
         width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .navbar a:last-child {
@@ -591,7 +594,7 @@ section {
     }
 
     .about-section h2,
-    .about-section p {
+    .about-info  {
         text-align: center;
     }
 
@@ -636,7 +639,7 @@ section {
 
     .input-box input {
         /* flex: 1 1 100%; */
-        
+
     }
 
     /* Footer */
@@ -714,7 +717,7 @@ section {
     padding-left: 2rem;
     min-height: 1rem;
     display: block;
-    
+
 }
 
 .form-actions {
@@ -735,6 +738,7 @@ section {
 .btn-whatsapp i {
     font-size: 3rem;
 }
+
 .input-invalid {
     border-color: #ff4d4d !important;
     box-shadow: 0 0 8px rgba(255, 77, 77, 0.4) !important;
@@ -801,7 +805,8 @@ section {
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
-    background-color: var(--main-color);
+    border: 3px solid var(--main-color);
+    background-color: var(--bg-color);
     box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color);
 }
 
@@ -817,10 +822,12 @@ section {
     box-shadow: 0 0 15px var(--main-color);
     transform: translateX(5px);
 }
-.eductaion-title{
+
+.eductaion-title {
     display: flex;
     align-items: baseline;
 }
+
 .timeline-date {
     display: inline-block;
     font-size: 1.6rem;
@@ -831,16 +838,18 @@ section {
 }
 
 .timeline-content h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 .timeline-org {
     font-size: 1.5rem;
-    opacity: 0.85;]
+    opacity: 0.85;
     margin-bottom: 0.3rem;
 }
-.score-title{
+
+.score-title {
     display: flex;
     justify-content: space-between;
 }
@@ -849,11 +858,12 @@ section {
     font-size: 2rem;
     color: var(--main-color);
     font-weight: 600;
+    padding: 0 0;
 }
 
 /* ─── EXPERIENCE ─── */
 .experience {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     padding: 8rem 8%;
     min-height: unset;
 }
@@ -879,10 +889,13 @@ section {
     box-shadow: 0 0 15px var(--main-color), 0 0 35px var(--main-color);
     transform: scale(1.01);
 }
-
+.experience-title{
+    display: flex;
+    justify-content: space-between;
+}
 .experience-header {
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
 }
 
@@ -921,6 +934,7 @@ section {
 
 /* ─── EDUCATION & EXPERIENCE RESPONSIVE ─── */
 @media (max-width: 768px) {
+
     .education,
     .experience {
         padding: 6rem 5%;
@@ -945,6 +959,9 @@ section {
     .timeline-content h3 {
         font-size: 1.9rem;
     }
+    .eductaion-title,.experience-title{
+        display: inline;
+    }
 
     .experience-card {
         padding: 2rem 1.8rem;
@@ -953,19 +970,26 @@ section {
     .experience-header h3 {
         font-size: 1.9rem;
     }
-    
+    .experience-company{
+        display: block;
+        font-weight: 800;
+
+    }
 }
+
 @media(max-width: 575px) {
-    .eductaion-title, .score-title{
-        display:block;
-    }    
+
+    .eductaion-title,
+    .score-title {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
     .timeline-content h3 {
         font-size: 1.7rem;
     }
-    
+
 
     .experience-header h3 {
         font-size: 1.7rem;
