@@ -820,7 +820,7 @@ section {
 
 .timeline-content:hover {
     box-shadow: 0 0 15px var(--main-color);
-    transform: translateX(5px);
+    transform: scale(1.02);
 }
 
 .eductaion-title {
